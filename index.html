@@ -1,0 +1,193 @@
+
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#07110d">
+<title>KICKZONE — Futbol olami</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--bg:#07110d;--card:#101d17;--green:#b8ff35;--muted:#91a397}
+body{background:var(--bg);color:#fff;font-family:Arial,sans-serif}
+a{color:inherit;text-decoration:none}
+header{padding:20px 6%;display:flex;align-items:center;
+justify-content:space-between;border-bottom:1px solid #203027}
+.logo{font-size:25px;font-weight:900;letter-spacing:-1px}
+.logo span{color:var(--green)}
+nav{display:flex;gap:22px;font-size:14px;color:#c2d0c6}
+nav a:hover{color:var(--green)}
+.live{color:var(--green);font-size:12px;font-weight:bold}
+.container{width:90%;max-width:1150px;margin:auto}
+.hero{padding:55px 0 35px}
+.tag{color:var(--green);font-size:12px;font-weight:bold;
+letter-spacing:2px}
+h1{font-size:clamp(38px,7vw,72px);line-height:1.03;
+margin:17px 0}
+h1 span{color:var(--green)}
+.hero p{color:var(--muted);line-height:1.7;max-width:530px}
+.btn{display:inline-block;background:var(--green);color:#07110d;
+font-weight:bold;padding:13px 20px;border-radius:8px;margin-top:23px}
+.section{padding:27px 0 42px}
+.section-head{display:flex;justify-content:space-between;
+align-items:center;margin-bottom:20px;gap:12px}
+h2{font-size:23px}
+.section-head small{color:var(--muted)}
+.matches{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.card{background:var(--card);border:1px solid #24352a;
+border-radius:14px;padding:20px}
+.league{font-size:11px;color:var(--green);font-weight:bold}
+.teams{display:flex;justify-content:space-between;align-items:center;
+gap:8px;margin:22px 0;text-align:center}
+.team{flex:1;font-size:13px;font-weight:bold}
+.crest{font-size:29px;display:block;margin-bottom:8px}
+.score{font-size:25px;font-weight:900;white-space:nowrap}
+.status{text-align:center;color:var(--muted);font-size:11px}
+.news{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}
+.news-card{background:var(--card);border-radius:14px;overflow:hidden;
+border:1px solid #24352a}
+.news-image{height:145px;display:grid;place-items:center;
+font-size:55px;background:linear-gradient(135deg,#193c27,#101b15)}
+.news-body{padding:17px}
+.news-body small{color:var(--green);font-size:11px}
+.news-body h3{font-size:17px;line-height:1.45;margin-top:9px}
+.news-body p{font-size:13px;color:var(--muted);
+line-height:1.6;margin-top:9px}
+.table{width:100%;border-collapse:collapse;background:var(--card);
+border-radius:12px;overflow:hidden}
+.table th,.table td{padding:15px 12px;text-align:left;
+border-bottom:1px solid #24352a;font-size:13px}
+.table th{color:var(--green);font-size:11px}
+.table td:last-child{text-align:right;font-weight:bold}
+footer{border-top:1px solid #24352a;padding:25px 5%;
+color:var(--muted);font-size:12px;text-align:center}
+#updated{color:var(--muted);font-size:11px}
+@media(max-width:700px){
+header{padding:17px 5%;flex-wrap:wrap;gap:15px}
+nav{width:100%;gap:17px;overflow-x:auto;padding-bottom:3px}
+.container{width:92%}
+.hero{padding-top:38px}
+.matches{grid-template-columns:1fr}
+.news{grid-template-columns:1fr}
+.news-image{height:125px}
+.card{padding:17px}
+}
+</style>
+</head>
+<body>
+<header>
+  <a class="logo" href="#">KICK<span>ZONE</span></a>
+  <div class="live">● FUTBOL OLAMI</div>
+  <nav>
+    <a href="#scores">Hisoblar</a>
+    <a href="#news">Yangiliklar</a>
+    <a href="#table">Turnirlar</a>
+  </nav>
+</header>
+
+<main class="container">
+  <section class="hero">
+    <div class="tag">FUTBOL — BIZ BILAN</div>
+    <h1>Futbolning<br>yuragi — <span>KICKZONE.</span></h1>
+    <p>Eng muhim futbol voqealari, jamoalar, uchrashuvlar
+    va turnirlar haqidagi ma'lumotlar bir joyda.</p>
+    <a class="btn" href="#news">Yangiliklarni ko‘r →</a>
+  </section>
+
+  <section class="section" id="scores">
+    <div class="section-head">
+      <h2>⚽ O‘yinlar hisobi</h2>
+      <small>Namuna ma’lumotlar</small>
+    </div>
+    <div class="matches">
+      <article class="card">
+        <div class="league">LA LIGA</div>
+        <div class="teams">
+          <div class="team"><span class="crest">⚪</span>Real Madrid</div>
+          <div class="score">2 : 1</div>
+          <div class="team"><span class="crest">🔵🔴</span>Barcelona</div>
+        </div>
+        <div class="status">Namuna hisob · jonli natija emas</div>
+      </article>
+      <article class="card">
+        <div class="league">PREMIER LEAGUE</div>
+        <div class="teams">
+          <div class="team"><span class="crest">🔴</span>Arsenal</div>
+          <div class="score">1 : 1</div>
+          <div class="team"><span class="crest">🔵</span>Chelsea</div>
+        </div>
+        <div class="status">Namuna hisob · jonli natija emas</div>
+      </article>
+      <article class="card">
+        <div class="league">CHAMPIONS LEAGUE</div>
+        <div class="teams">
+          <div class="team"><span class="crest">🔴</span>Liverpool</div>
+          <div class="score">3 : 0</div>
+          <div class="team"><span class="crest">⚫</span>Inter</div>
+        </div>
+        <div class="status">Namuna hisob · jonli natija emas</div>
+      </article>
+    </div>
+  </section>
+
+  <section class="section" id="news">
+    <div class="section-head">
+      <h2>📰 Futbol yangiliklari</h2>
+      <small>So‘nggi xabarlar</small>
+    </div>
+    <div class="news">
+      <article class="news-card">
+        <div class="news-image">🏆</div>
+        <div class="news-body">
+          <small>CHEMPIONLAR LIGASI</small>
+          <h3>Yevropa futbolining eng katta turniri</h3>
+          <p>Turnir jadvali, jamoalar va uchrashuvlar haqidagi
+          yangiliklar shu yerda joylashadi.</p>
+        </div>
+      </article>
+      <article class="news-card">
+        <div class="news-image">⚽</div>
+        <div class="news-body">
+          <small>ISPANIYA</small>
+          <h3>Real Madrid va Barcelona olamidagi voqealar</h3>
+          <p>Ispaniya futboli, o‘yinlar va klublar haqidagi
+          xabarlar uchun bo‘lim.</p>
+        </div>
+      </article>
+      <article class="news-card">
+        <div class="news-image">🌍</div>
+        <div class="news-body">
+          <small>JAHON FUTBOLI</small>
+          <h3>Dunyo futbolidan eng muhim xabarlar</h3>
+          <p>Transferlar, futbolchilar va boshqa musobaqalar
+          haqidagi yangiliklar uchun bo‘lim.</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="section" id="table">
+    <div class="section-head">
+      <h2>🏆 Turnirlar</h2>
+      <small>Musobaqalar ro‘yxati</small>
+    </div>
+    <table class="table">
+      <thead><tr><th>TURNIR</th><th>MAMLAKAT</th><th>HOLATI</th></tr></thead>
+      <tbody>
+        <tr><td>Premier League</td><td>Angliya</td><td>Mavsum</td></tr>
+        <tr><td>La Liga</td><td>Ispaniya</td><td>Mavsum</td></tr>
+        <tr><td>Bundesliga</td><td>Germaniya</td><td>Mavsum</td></tr>
+        <tr><td>Serie A</td><td>Italiya</td><td>Mavsum</td></tr>
+      </tbody>
+    </table>
+  </section>
+  <p id="updated">Dizayn namoyishi · Haqiqiy ma’lumotlar hali ulanmagan.</p>
+</main>
+
+<footer>
+  <div class="logo">KICK<span style="color:#b8ff35">ZONE</span></div>
+  <p style="margin-top:10px">Futbol olami bir joyda.</p>
+  <p style="margin-top:8px">© 2026 KICKZONE</p>
+</footer>
+</body>
+</html>
